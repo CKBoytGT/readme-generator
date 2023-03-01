@@ -65,10 +65,28 @@ function renderLicenseSection(license) {
   };
 };
 
+function renderTOC(license) {
+  if (license !== 'NONE') {
+    return `
+- [License](#license)`;
+  } else {
+    return '';
+  };
+};
+
 function generateMarkdown(data) {
   return `# ${data.title}
 
 ${data.desc}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Issues](#issues)
+- [Contributing](#contributing)
+- [Credits](#credits)${renderTOC(data.license)}
 
 ## Installation
 
@@ -82,7 +100,7 @@ ${data.usage}
 
 ![Screenshot](${data.screenshot})
 
-## Reporting Issues
+## Issues
 
 ${data.issues}
 
@@ -93,8 +111,7 @@ ${data.contribute}
 ## Credits
 
 ${data.credits}
-${renderLicenseSection(data.license)}
-`;
+${renderLicenseSection(data.license)}`;
 };
 
 module.exports = generateMarkdown;
