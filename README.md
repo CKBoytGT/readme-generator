@@ -15,8 +15,8 @@ Clone the repo locally on your drive.
 
 ## Demo Video
 
-Pending.
+https://github.com/CKBoytGT/readme-generator/blob/main/assets/video/demo-video.mp4
 
 ## Links
-- Sample README: pending.
+- [Sample README](https://github.com/CKBoytGT/readme-generator/blob/main/output/sample-README.md)
 - [GitHub Repo](https://github.com/CKBoytGT/readme-generator)
