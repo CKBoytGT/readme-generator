@@ -15,7 +15,7 @@ Clone the repo locally on your drive.
 
 ## Demo Video
 
-[demo-video.webm](https://user-images.githubusercontent.com/118075006/222606296-4eea07f3-a07d-43e5-83e8-e3ccdb077dd9.webm)
+[demo-video.webm](https://user-images.githubusercontent.com/118075006/222616366-8709449f-eadd-4b29-97bd-e1e757f6e5ed.webm)
 
 ## Links
 - [Sample README](https://github.com/CKBoytGT/readme-generator/blob/main/output/sample-README.md)
