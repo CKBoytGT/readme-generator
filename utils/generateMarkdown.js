@@ -59,7 +59,9 @@ function renderLicenseSection(license) {
     return `
 ## License
 
-[![License: ${license}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})`;
+[![License: ${license}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})
+
+This project is licensed under [${license}](${renderLicenseLink(license)}).`;
   } else {
     return '';
   };
@@ -77,16 +79,17 @@ function renderTOC(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+## Description
+
 ${data.desc}
 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Screenshot](#screenshot)
-- [Issues](#issues)
+- [Usage](#usage)${renderTOC(data.license)}
 - [Contributing](#contributing)
-- [Credits](#credits)${renderTOC(data.license)}
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -95,23 +98,22 @@ ${data.install}
 ## Usage
 
 ${data.usage}
-
-## Screenshot
-
-![Screenshot](${data.screenshot})
-
-## Issues
-
-${data.issues}
+${renderLicenseSection(data.license)}
 
 ## Contributing
 
-${data.contribute}
+${data.contributing}
 
-## Credits
+## Tests
 
-${data.credits}
-${renderLicenseSection(data.license)}`;
+${data.tests}
+
+## Questions
+
+[${data.username} on GitHub](https://github.com/${data.username})
+
+Email me at [${data.email}](mailto:${data.email}).`;
+
 };
 
 module.exports = generateMarkdown;
