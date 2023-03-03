@@ -40,7 +40,8 @@ const licenseLinks = {
 
 function renderLicenseBadge(license) {
   if (license !== 'NONE') {
-    return `https://img.shields.io/badge/License-${licenseLinks[license].badge}`;
+    return `
+[![License: ${license}](https://img.shields.io/badge/License-${licenseLinks[license].badge})](${renderLicenseLink(license)})`;
   } else {
     return '';
   };
@@ -59,8 +60,6 @@ function renderLicenseSection(license) {
     return `
 ## License
 
-[![License: ${license}](${renderLicenseBadge(license)})](${renderLicenseLink(license)})
-
 This project is licensed under [${license}](${renderLicenseLink(license)}).`;
   } else {
     return '';
@@ -77,8 +76,8 @@ function renderTOC(license) {
 };
 
 function generateMarkdown(data) {
-  return `# ${data.title}
-
+  return `# ${data.title}${renderLicenseBadge(data.license)}
+  
 ## Description
 
 ${data.desc}

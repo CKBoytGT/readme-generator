@@ -3,16 +3,16 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 const questions = [
-    'What is the title of your project?', // 0 title
-    'Please provide a brief description of your project.', // 1 desc
-    'What are the steps required to install your project?', // 2 install
-    'What are the steps required to use your project?', // 3 usage
-    'Which license is your project using?', // 4 license
-    'How can users contibute to the project?', // 5 contributing
-    'What tests have you provided, and how can users run them?', // 6 tests 
-    'What is your GitHub username?', // 7 username
-    'What is the email address you would like users to contact with questions?', // 8 email
-    'What would you like the filename to be? Do not include the extension.' // 9 filename
+    'What is the title of your project?',
+    'Please provide a brief description of your project.',
+    'What are the steps required to install your project?',
+    'What are the steps required to use your project?',
+    'Which license is your project using?',
+    'How can users contibute to the project?',
+    'What tests have you provided, and how can users run them?',
+    'What is your GitHub username?',
+    'What is the email address you would like users to contact with questions?',
+    'What would you like the filename to be? Do not include the extension.'
 ];
 
 function writeToFile(fileName, data) {
@@ -63,12 +63,12 @@ function init() {
                 ],
             },
             {
-                type: 'editor',
+                type: 'input',
                 name: 'contributing',
                 message: questions[5],
             },
             {
-                type: 'editor',
+                type: 'input',
                 name: 'tests',
                 message: questions[6],
             },
