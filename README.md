@@ -4,7 +4,7 @@ A command-line application that dynamically generates a README file in Markdown 
 
 ## Installation
 
-Clone the repo locally on your drive.
+Clone the repo locally on your drive. You will also need [Node.js](https://nodejs.org/en/).
 
 ## Usage
 
